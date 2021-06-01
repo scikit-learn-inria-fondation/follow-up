@@ -1,0 +1,74 @@
+## June 1st 2021
+
+### Chiara
+- Minimalist fixes to MiniBatchNMF: I'm passing on it, I will not have time to finish before leaving.
+- Checking https://github.com/scikit-learn/scikit-learn/pull/17443
+- Fujitsu sprint
+
+### Gael
+
+- Hiring for MOOC
+- Politics around the cloud resources for MOOC
+
+### Mathis
+- Made some improvements on Manhattan distance optimization (discussed with Olivier, Jérémie and Julien)
+- Read about `BLAS` to maybe use some routines for Manhattan
+- Benchmark sequential and parallel Manhattan distances
+- Work on adding `Catboost` and `TensorFlow`'s decision forests to grad boosting benchmarks
+- Improved randomized search reporting by fixing HPO curves' smoothness (thanks Olivier!)
+- Start investigating some UI issues with `plotly` regarding the main benchmark reports
+
+### Olivier
+- MOOC feedback reviews
+- Fujitsu sprint reviews
+- Some live pair debugging of the permutation smoothing of the benchmark tool
+- Preparing the TC meeting presentation
+
+### Guillaume
+- Gave a couple of lectures
+- Follow-up MOOC forum
+- Follow-up Fujitsu PRs
+- Draft a couple of entries for Olivier presentation for TC
+
+### Julien
+ - `pdist_aggregation`: Fast Euclidean in progress
+     - 32 bits supports (wip), this is quite hard to support with Fast Euclidean
+     - `return_distance`: done
+     - exploring the support of other distances
+     - exploring mitigation for the `gemm`-trick
+ - Caught up with Xavier for Cython+, waiting for mock-up from him
+ - A few discussions for the Common loss private module: https://github.com/scikit-learn/scikit-learn/pull/19088
+
+### Jérémie
+- "finished" review for MiniBatchNMF
+- discussions with Mathis, Julien and Olivier about benchmarks and pairwise distances.
+- reviewed few PRs from the sprint
+- n_features_in_ in compose and feature_extraction.
+  https://github.com/scikit-learn/scikit-learn/pull/20175
+  https://github.com/scikit-learn/scikit-learn/pull/20180
+
+### Loïc
+- MOOC: forum and organisation => "Coordination" category in the Discourse forum for the MOOC team https://mooc-forums.inria.fr/moocsl/c/coordination/270
+- MOOC recruitment interview
+- joblib: fix CI (yeah something technical \o/, weird hang in CircleCI doc generation => used ReadTheDocs instead)
+- looking for more technical things to do outside of the MOOC! Let me know if you have suggestions!
+- misc: was officially elected in the Jean-Zay Users Committee.
+
+### Alex
+- I was asked to give a talk on scikit-learn for BNP late August
+- I will talk to Dassault June 17 (dealt above by Inria)
+
+### TODO
+
+- Scikit-learn @ Inria organisation (Chiara & Gael)
+- Community manager position job offer (Gael & everybody)
+- Technical committee of the consortium (Chiara, Gael, Olivier, Guillaume, Jeremie, Alex)
+- Mathis:
+    - Update HPO curves:
+        - Report quartile rather than mean permutated curves
+        - Add front pareto
+    - Distance metrics: discuss with Julien how to update the dist metrics module
+- `n_features_in_` (Guillaume, Jeremie, Loïc)
+- Julien:
+    - pdist_aggregation + distance metrics
+    - Drafted PRs
