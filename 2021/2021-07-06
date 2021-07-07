@@ -1,0 +1,86 @@
+# Consortium follow-up
+
+## July 6, 2021
+
+### Gael
+
+- A PR to add sphinxext-opengraph: generates thumbnails on social media https://github.com/scikit-learn/scikit-learn/pull/20464
+- Recruitement of community offer is bloqued for reasons of flow of money at Inria
+
+### Olivier
+
+- a bit of MOOC forum follow-up
+- tried to investigate AdaBoost convergence problem discovered in a discussion on the MOOC forum: [#20443](https://github.com/scikit-learn/scikit-learn/issues/20443): does not seem to be a numerical problem (unfortunately)
+- cloudpickle maintenance with Pierre Glaser (one more PR to review before releasing)
+- ARM64 CI issue under investigation: [numpy-19411](https://github.com/numpy/numpy/issues/19411)
+- Intel call: interested in a new collaboration to see if scikit-learn would benefit from [dpctl](https://github.com/IntelPython/dpctl) (Python/Cython API) and or [numba-dppy](https://intelpython.github.io/numba-dppy/latest/index.html): we could explore if some of Julien's work would be amenable to work efficiently on Intel GPUs using those 
+- Next: mooc meeting tomorrow
+
+### Mathis
+- _Was off last Friday and Monday_
+- Fix some CI bugs after reorganizing the benchmark reports
+- Add ONNX Runtime to benchmarks: write some adapters to support `scikit-learn-intelex`'s estimators
+
+### Julien
+
+ - [#20254](https://github.com/scikit-learn/scikit-learn/pull/20254): Nearly-stabilised `PairwiseDistancesReduction` class hierarchy
+     - paved the way for implementing reductions easily by separating concerns 
+     - `ArgkMin` is supported on most distances on (dense, dense) dataset pairs
+     - `RadiusNeighborhood` is being develop similarly, see [this PR](https://github.com/jjerphan/scikit-learn/pull/3)
+     - Next:
+         - finish to design support for distance computations on (dense, sparse), (sparse, dense), (sparse, sparse): joint-work with @Mathis if he's interested? :)
+         - implement and benchmark again
+ - Reviewed DOC PRs for GaussianProcesses from Guillaume (see last week's notes)
+ - Started diving into Cython code base and Cython+ diff
+     - quick synchronisation call with Cython+ consortium members this morning
+     - unproductive on short term but I guess relevant for helping Cython/Cython+ moving forward
+ - _Will be on site starting August 1st!_
+
+### Jérémie
+
+- MiniBatchNMF https://github.com/scikit-learn/scikit-learn/pull/16948/
+  not faster than NMF :(
+  currently making learning curve plots -> need to adjust stopping criterion.
+- small feedback on pairwise distances PR from Julien.
+  
+### Guillaume
+
+- Expect some reviews on some PRs (see column "Waiting for review" in my [board](https://github.com/scikit-learn/scikit-learn/projects/17)). In short:
+    - 1 PR regarding PDP parameter
+    - 1 PR kPCA
+    - 4 PRs GPR
+- Reviewed PRs:
+    - Bunch of numpydoc validation PRs
+    - Working on the extension of PDP for categorical variables (API + examples)
+
+### Loïc
+
+- `error_score=nan` (default) warning not shown for n_jobs=2 https://github.com/scikit-learn/scikit-learn/issues/20475. Feed-back from the MOOC (plenty of confused users about NaN test scores that did not know what to do)
+- onboard Arturo on the MOOC
+- MOOC forum
+- Jean-Zay users committee last week: no highlight but that was interesting to see people in real life (some interesting discussions that will not change anything in the short-term but still ...)
+
+### Arturo
+
+- Starting to get adapted to the job (paperwork, seminars, communication channels)
+- Read posts on the MOOC forum to look for holes in our explanation
+- Fix some typos, grammar and rephrase some pieces of text in the .py files
+- Learn new things from Loïc and Olivier
+
+### TODO Next
+
+- Find a workaround or at least report enough debug info upstream for the ARM64 CI problems (Olivier)
+- feature_names consistency checks [#18010](https://github.com/scikit-learn/scikit-learn/pull/18010) (Olivier, Guillaume)
+- Move forward with [#20254](https://github.com/scikit-learn/scikit-learn/pull/20254) (Julien)
+- Dive into Cython code base (Julien)
+- PDP for categorical features [#18298](https://github.com/scikit-learn/scikit-learn/pull/18298) (Guillaume)
+- Calibration plot [#17443](https://github.com/scikit-learn/scikit-learn/pull/17443) (Guillaume)
+- decorator `if_available` (Guillaume)
+- `error_score=nan` (default) usability bug https://github.com/scikit-learn/scikit-learn/issues/20475
+- small example of gitlab repo launching CI jobs on Margaret. I had something working on the Willow/Sierra cluster a while ago. Useful for Mathis benchmarks and potentially other use cases (Alex MNE-python pipeline, Thomas BenchOpt benchmarks) (Loïc)
+- Gael: sort out money and then hires
+- Jérémie: finalize MiniBatchNMF PR.
+- Jérémie: review pairwise distances reduction.
+- Jérémie: test numba dppy
+- MOOC forum monitoring (Loïc + Arturo). End of the MOOC next week (July 13th)
+- Have a look at numba-dppy to take an informed decision (Julien, Olivier)
