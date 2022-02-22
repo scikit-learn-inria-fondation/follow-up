@@ -1,0 +1,79 @@
+## February 15th
+
+### Olivier
+
+- MOOC videos / pending reviews: done!
+- Fixed loky unstable CI: [#348](https://github.com/joblib/loky/pull/348) [#349](https://github.com/joblib/loky/pull/349)
+    - all stable now!
+- Thinking about what should be the expected data-shape / API for `precision_at_k` [#22431](https://github.com/scikit-learn/scikit-learn/pull/22431) and other ranking metric to make them compatible with our scoring / model evaluation / model selection tools.
+- Thinking about the design for the pluggable computation routines:
+    - [#22438](https://github.com/scikit-learn/scikit-learn/issues/22438)
+    - Trying to make my intel devcloud ssh config work again...
+    - Need to draft with Francois a comm' doc for our collaboration with Intel
+
+### Jérémie
+- tried adding coverage for cython files (https://github.com/scikit-learn/scikit-learn/pull/22439). Fail...
+- Reviews. Do you know the "quick review" label ?
+    - It was added by Thomas :)
+- discussed with Thomas about reducing overhead of Parallel(n_jobs=1)
+- finally got back to the callback API, currently consolidating the example callbacks.
+- waiting for reviews NMF and adding stopping criteria to MiniBatchDictLearning https://github.com/scikit-learn/scikit-learn/pull/18975 and https://github.com/scikit-learn/scikit-learn/pull/16948
+
+### Guillaume
+
+- Reviews PRs + updating a couple my PRs
+- TODO
+    - Would like to spend some time looking again at the Pipeline API: `Pipeline.from_fitted_pipeline(...)`
+
+### Gael
+
+- Teaching, used scikit-learn-mooc, was great (binder integration)
+- Moving forward with strategy national IA (current status: finalizing "lettre de mission")
+- A PR on reordering metrics in documentation (I vote against alphabetic ordering: most important first), and discouraging the use of "explained_variance_score"
+    - https://github.com/scikit-learn/scikit-learn/pull/22491
+
+### Loïc
+
+- MOOC
+- Using pinned dependencies in CI with auto-update bot [#22425](https://github.com/scikit-learn/scikit-learn/issues/22425). Started a PR [#22488](https://github.com/scikit-learn/scikit-learn/pull/22448) using conda-lock. A couple of CI clean-up PRs while working on this.
+- joblib memmap arrays alignment [#1254](https://github.com/joblib/joblib/pull/1254) to finalise
+- Use notebook-style in more examples [#22406](https://github.com/scikit-learn/scikit-learn/issues/22406)
+
+
+### Arturo
+
+- Was off for 2 days
+- MOOC:
+    - meeting
+    - beta testing / final tweaks: [!63](https://gitlab.inria.fr/learninglab/mooc-scikit-learn/mooc-scikit-learn-coordination/-/merge_requests/63), [#574](https://github.com/INRIA/scikit-learn-mooc/pull/574)
+    - my first answer in the v2 forum!
+- Started to tackle Positive/Negative Likelihood Ratio Issue [#22404](https://github.com/scikit-learn/scikit-learn/issues/22404)
+
+### François
+
+- Prepared schedule and communication about the upcoming sprint with the Paris WiMLDS's team + launched communication
+- Blog posts 
+- Communication/Advocacy for the MOOC mainly on LinkedIn + Hub France IA + AXA
+- Met Chiara, Dons Solidaires (Fondation), discussed with Kevin Kok Heang (Ministère Economie), Quantmetry 
+- NEXT: 
+    - Post roadmap + update showroom inria sklearn page
+    - Testing the “setup” repo for WiMLDS sprint
+    - Continue Press release to announce partnership with Intel
+    - Follow up COVEA + Michelin
+
+### Discussions
+
+- Release loky / joblib without waiting for return_generator=True / memory aligned pickle?
+- AXA-scikit-learn event: Keynote + Q&A with their data scientists
+- Well being at work, meeting this Thursday: https://notes.inria.fr/fcXjC9LLR1aLJYz5ID2ShQ#
+- French Economy Ministry visit (2nd or 9th of March?) Kevin Kok Heang + Julien Vignon (AI project leaders. Draft schedule presentation of the library/OS + consortium + French AI platform, presentation of their vision and upcoming AI projects, exchange with the dev team? (coffee break), exchange with Gaël? (30-40 mins). 
+
+### TODO / Next
+
+- Rework some example notebooks (like plot_lasso_and_elasticnet) (Arturo)
+    - Link to the one that I found: https://hackmd.io/3LGj5QeJRmWN9E2B_Sv7_g
+- SLEP 006 (Olivier)
+- Release loky and joblib
+- Strategie National IA (next step: Matignon, SGPI -Secretariat General aux Programmes d'Investissement) Gael
+- focus more on callback API (Jérémie)
+- Review Jeremie's PR
