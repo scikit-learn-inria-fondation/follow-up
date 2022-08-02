@@ -1,0 +1,82 @@
+## July 27, 2022
+
+### Gaël
+
+* Recruitement of LH: might be failing because of immigration
+* New offices: visited space with François. Can be an interesting space,
+  but Inria needs to invest in pleasant layout => Lobbying higher ups
+* Recruitement of program manager: some interviews (last week was a fail)
+
+### Guillaume
+
+- Interview for project manager position
+- MOOC wrap-up meeting
+- Admin stuff:
+    - Mission EuroSciPy & EuroPython
+- PR reviews:
+    - Parameter validation
+
+### Franck
+
+- Wrote down reading notes on basics of gpu programming
+- Setup a collection of working environments for numba_dpex, on intel devcloud and intel laptop - also works on 32-bits only intel gpus.
+    - [name=Gael] put these in a public-facing place?
+- Prototyped a k-means with numba_dpex with state-of-the-art optimizations (not working yet)
+
+### Julien
+
+- Various Pull Requests reviews
+- [`PairwiseDistancesReduction`](https://github.com/scikit-learn/scikit-learn/issues/22587)
+    - float32: mergeable, will be merged when Olivier comes back
+    - sparse-dense PR: put on hold because it is blocked by the float32 one
+    - onboarding Franck and Mickay on it
+    - a few other small ideas of PRs jumped in when talking with Olivier
+- Call with Maxwell re: joining the Contributor Experience Team
+- Start working jointly with Franck re: Intel + plugin design
+
+
+### François
+
+- legal US/scikit-learn brand. Provide technical elements for each class.
+- Construction site visit with Gaël and Thomas
+- Communication around the job ad
+- Blog post (to be finished)
+- OSXP 22, selection of talks, preparation of the schedule, forum (it's not all about huge data)
+- Travel agency asked for a Eurostar refund
+- Holiday Friday 29th of July-5th of August maybe one more week or home office. 
+
+### Loïc
+
+
+CI stuff:
+- figured out the reason for the sporadic nogil failure: https://github.com/scikit-learn/scikit-learn/pull/23994. Also OpenBLAS version updated in nogil Scipy wheel: https://github.com/colesbury/nogil-install/issues/2.
+- scipy latest nightly wheel not being picked up due to naming: https://github.com/scipy/scipy/issues/16702. In relationship with scipy.stats.mode future changes (https://github.com/scikit-learn/scikit-learn/pull/23633)
+
+### Jérémie
+- reviews for param_validation and others
+- fix and helper for validation of "cv":
+  https://github.com/scikit-learn/scikit-learn/pull/24010
+- off: all august
+
+### Discussion
+
+- Follow-up on Porto Seguro email?
+- > [name=Julien] Should we update the roadmaps?
+    - For the scikit-learn roadmap, it was part of the notes in April: https://github.com/scikit-learn/administrative/blob/master/meeting_notes/2022-04-25.md
+- Childcare at EuroSciPy: check for [free ticket (soon)](https://ti.to/pysv/euroscipy-2022)
+
+### TODO / Next
+
+- Joint work with Franck (Julien)
+- Onboarding/helping new people in the team/community (Julien)
+- Need to _actually_ do another round of reviews on some significant PRs (Julien)
+- k-means benchmark: debug and test the numba_dpex gpu kmeans, setup a test bench with dataset of various sizes, compare with vanilla sklearn, sklearn-intelex, and intel's numba_dpex version. (Franck)
+- Looping with Nvidia later this week (Gael, François will try)
+- Vincent starting to look at survival next Monday (Gael, someone else?)
+    - Guillaume -> I can come on Monday
+- Update job ads page of the website (François)
+- Finish blog post (François)
+- Work on the technical notes of the SNIA (François)
+- Order 2 new laptops, ideally using foundation money (François suivi commande précédente, Guillaume, Gaël dépense)
+- Review PRs for tracker (Guillaume)
+- Looking again at the common tests (Guillaume)
