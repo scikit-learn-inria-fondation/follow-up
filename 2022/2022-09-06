@@ -1,0 +1,117 @@
+## September 6th, 2022
+
+### Franck
+
+Off for two weeks.
+
+### Gael
+
+Last week/month:
+- Euroscipy
+- Hiring (project manager for data wrangling project)
+
+TODO:
+- Land
+- Proposal for French gov (Gael, Francois)
+- Iterate governance (Gael, Julien) 
+
+### Julien
+
+ - Finished preparting talk for EuroSciPy 2022
+ - Started a script / benchmark for obtaining plots between 2 revisions
+ - Review of Franck's implementation of k-means: merged.
+ - Contributed a `pre-commit` setup to `dirty_cat`
+ - Reviewed of some PRs for scikit-learn, including:
+     - [Array API for LDA](https://github.com/scikit-learn/scikit-learn/pull/22554)
+     - [Factorisation for sklearn-numba-dpex](https://github.com/soda-inria/sklearn-numba-dpex/pull/14)
+ - Next:
+     - Review [FEA add interaction constraints to HGBT](https://github.com/scikit-learn/scikit-learn/pull/21020)
+     - Iterate on a draft for Governance Document as [discussed yesterday](https://github.com/scikit-learn/administrative/commit/a8aafe4a4d227c5fc9b75bee5eb1aece608ba7d4)
+ - Off on Thursday afternoon, but there for meeting with Intel 
+ - Questions:
+     - Would like to write article about Cython + some library internals for [Scientific Python's blog](https://blog.scientific-python.org/).
+     - Interested to participate in two [Scientific Python's summits](https://discuss.scientific-python.org/c/summits/27) (likely remote work sessions organised by maintainers for maintainers regarding common technical issues/subjects)
+         - [Sparse Array Summit](https://discuss.scientific-python.org/t/sparse-array-summit/365/5)
+         - [Ragged Array Summit](https://discuss.scientific-python.org/t/ragged-array-summit/465/2)
+
+### Loïc
+
+- [JupyterLite PoC]((https://incomparable-youtiao-5239a9.netlify.app/lab?path=full-index.ipynb)) for MOOC notebooks: feel free to beta-test! [repo](https://github.com/lesteve/scikit-learn-mooc-jupyterlite). Bigger problems noticed:
+  + tab completion broken with xeus-python kernel: https://github.com/jupyterlite/xeus-python-kernel/issues/77
+  + kernel takes a long time to initialise 30-45s (probably because of size of packages?)
+  + memory issues when opening 3-4 kernels, with not super helpful behaviour (only errors in the browser console)
+- CI issues seen in updating lock files PR by Olivier https://github.com/scikit-learn/scikit-learn/pull/24363
+  + Weird inconsistency in scipy numpy pinning https://github.com/scipy/scipy/issues/16964
+  + PR to pin numpy https://github.com/scikit-learn/scikit-learn/pull/24373
+- thinking about maybe starting the brownout for the `sklearn` package at one point (beginning October?): https://github.com/scikit-learn/scikit-learn/issues/8215#issuecomment-864879723
+
+
+### François
+- EuroSciPy
+- Review of grant proposal for French gov 
+- Follow-up "lettres de manifestation d'interet"
+
+
+### Guillaume
+
+- EuroSciPy
+- Back log PRs from the sprint
+
+### Arturo
+
+- EuroSciPy: 2 tutorials, some PR reviews (sprint), a lot of nice people
+- PR to support micro averaging in ovr-roc-auc: [#24338](https://github.com/scikit-learn/scikit-learn/pull/24338)
+- (final?) iter on ECML slides
+
+
+### Olivier
+
+- EuroScipy maintainers track / sprint:
+    - `__dataframe__` interop https://github.com/pandas-dev/pandas/issues/48393
+    - Coordination on nightly builds SPEC (WIP):
+        - https://discuss.scientific-python.org/t/interest-in-github-action-for-scipy-wheels-nightly-uploads-and-removals/397/15
+- Reviewing Arturo's PR
+- Some CI fixes:
+    - https://github.com/scikit-learn/scikit-learn/pull/24363
+    - Need to do a joblib release to support new PyPy
+    - Detected inconsistent constraints for scipy package in Anaconda distrib.
+- Will teach on Wednesdays in October / November maybe December
+
+
+### Jérémie
+- param validation is done for all estimators. public functions next, but a little break before :)
+- Reviewing a few PRs for float32 preservation in transformers.
+- Want to get back to callbacks
+
+
+### Vincent
+- EuroScipy
+- Kick-off AP-HP
+- Call about survival analysis w/ Sebastien Conort, Olivier & Gael
+
+
+## Discussions
+
+## TODO/Next
+
+- Contact PSF CoC working group for guidelines (Olivier)
+- Organize TC/MLOps worskop: send invitations, follow up talks, book room @inria Paris, breakfast/breaks (François)
+- Continue writing the grant proposal for French SNAI (François, Gaël)
+- Iterate governance (Gael, Julien) 
+- scikit-learn PRs:
+    - Guillaume: 
+        - tracker
+        - metadata routing
+        - hdbscan
+    - Arturo
+        - micro averaging in ovr-roc-auc
+        - plot_roc example
+- restart MOOC fixes (Arturo)
+- Keynote at [ECML](https://notes.desy.de/-yxvasxzQPWO1iKwlQB5Kw?edit#) (September 13th) (Arturo)
+- PyData Paris Meetup Thursday (Guillaume)
+- Follow-up on PRs highlighted during the dev meeting (Olivier)
+- Reviews PR (Julien)
+- Last bits for `PairwiseDistancesReduction` (Julien)
+- PR to pin pypy to avoid issue in vendored cloudpickle inside joblib (Loïc)
+- ensure positive sample weights with set_config to allow negative weights https://github.com/scikit-learn/scikit-learn/issues/15531 (Loïc)
+- callbacks API (Jérémie)
