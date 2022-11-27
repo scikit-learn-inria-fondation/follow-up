@@ -1,4 +1,4 @@
-#### Weekly follow-up of Consortium development priorities
+#### Follow up on the Consortium's development initiatives each week
 
 See for reference
 - priorities for [2021](https://scikit-learn.fondation-inria.fr/technical-committee-november-5-2020-fr/)
